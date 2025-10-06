@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>100 Question Interactive Quiz</title>
+  <style>
+    :root{ --bg:#f6fbff; --card:#fff; --accent:#0b63ff; --correct:#16a34a; --wrong:#ef4444 }
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; background:var(--bg); color:#0f172a; padding:24px}
+    .container{max-width:980px;margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    h1{font-size:20px;margin:0}
+    .card{background:var(--card);border-radius:10px;padding:18px;margin-bottom:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+    .qnum{font-weight:700;margin-right:8px}
+    .options{margin-top:8px;display:flex;flex-direction:column;gap:6px}
+    label{display:flex;gap:8px;align-items:center;padding:8px;border-radius:8px;cursor:pointer}
+    input[type=radio]{transform:scale(1.05)}
+    .feedback{margin-top:8px;font-weight:700}
+    .meta{display:flex;gap:12px;align-items:center}
+    .btn{background:var(--accent);color:white;padding:8px 12px;border-radius:8px;border:0;cursor:pointer}
+    .score{font-size:16px;font-weight:700}
+    footer{margin-top:18px;text-align:center;color:#475569}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>100 Question Interactive Quiz</h1>
+      <div class="meta">
+        <div class="score" id="score">Score: 0 / 0</div>
+        <button id="showResult" class="btn">Show Final Result</button>
+      </div>
+    </header>
+
+    <main id="quiz">
+      <!-- Each question card: data-answer contains the correct option letter (A/B/C/D) -->
+
+<!-- Question 1 -->
+<div class="card" data-answer="B">
+  <div><span class="qnum">1.</span>The Vedas are the oldest literature of the Aryans. How many Vedas are there?</div>
+  <div class="options">
+    <label><input type="radio" name="q1" value="A"> (A) 3</label>
+    <label><input type="radio" name="q1" value="B"> (B) 4</label>
+    <label><input type="radio" name="q1" value="C"> (C) 5</label>
+    <label><input type="radio" name="q1" value="D"> (D) 6</label>
+  </div>
+  <div class="feedback" aria-live="polite"></div>
+</div>
+
+<!-- Question 2 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">2.</span>Chandragupta II was popularly known as</div>
+  <div class="options">
+    <label><input type="radio" name="q2" value="A"> (A) Ashoka</label>
+    <label><input type="radio" name="q2" value="B"> (B) Samudragupta</label>
+    <label><input type="radio" name="q2" value="C"> (C) Vikramaditya</label>
+    <label><input type="radio" name="q2" value="D"> (D) None of them</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 3 -->
+<div class="card" data-answer="D">
+  <div><span class="qnum">3.</span>Who was the last Mughal king?</div>
+  <div class="options">
+    <label><input type="radio" name="q3" value="A"> (A) Aurangzeb</label>
+    <label><input type="radio" name="q3" value="B"> (B) Altamash</label>
+    <label><input type="radio" name="q3" value="C"> (C) Ghiyas-ud-din Balban</label>
+    <label><input type="radio" name="q3" value="D"> (D) Bahadur Shah Zafar II</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 4 -->
+<div class="card" data-answer="A">
+  <div><span class="qnum">4.</span>The Cripps Mission led by Sir Stafford Cripps came to India in</div>
+  <div class="options">
+    <label><input type="radio" name="q4" value="A"> (A) 1942</label>
+    <label><input type="radio" name="q4" value="B"> (B) 1944</label>
+    <label><input type="radio" name="q4" value="C"> (C) 1946</label>
+    <label><input type="radio" name="q4" value="D"> (D) 1947</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 5 -->
+<div class="card" data-answer="B">
+  <div><span class="qnum">5.</span>Who was the first Speaker of the Lok Sabha of Independent India?</div>
+  <div class="options">
+    <label><input type="radio" name="q5" value="A"> (A) Sardar Vallabhbhai Patel</label>
+    <label><input type="radio" name="q5" value="B"> (B) G. V. Mavalankar</label>
+    <label><input type="radio" name="q5" value="C"> (C) Sarojini Naidu</label>
+    <label><input type="radio" name="q5" value="D"> (D) Aruna Asaf Ali</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 6 -->
+<div class="card" data-answer="D">
+  <div><span class="qnum">6.</span>Which of the following celestial bodies is known as Morning Star?</div>
+  <div class="options">
+    <label><input type="radio" name="q6" value="A"> (A) Alpha Centauri</label>
+    <label><input type="radio" name="q6" value="B"> (B) Proxima Centauri</label>
+    <label><input type="radio" name="q6" value="C"> (C) Polestar</label>
+    <label><input type="radio" name="q6" value="D"> (D) Venus</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 7 -->
+<div class="card" data-answer="A">
+  <div><span class="qnum">7.</span>Baikal Lake is situated in</div>
+  <div class="options">
+    <label><input type="radio" name="q7" value="A"> (A) Russia</label>
+    <label><input type="radio" name="q7" value="B"> (B) Ethiopia</label>
+    <label><input type="radio" name="q7" value="C"> (C) South Africa</label>
+    <label><input type="radio" name="q7" value="D"> (D) Switzerland</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 8 -->
+<div class="card" data-answer="A">
+  <div><span class="qnum">8.</span>What is the capital of Bhutan?</div>
+  <div class="options">
+    <label><input type="radio" name="q8" value="A"> (A) Thimpu</label>
+    <label><input type="radio" name="q8" value="B"> (B) Sang Drup</label>
+    <label><input type="radio" name="q8" value="C"> (C) Gangtok</label>
+    <label><input type="radio" name="q8" value="D"> (D) Phuntsholing</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 9 -->
+<div class="card" data-answer="D">
+  <div><span class="qnum">9.</span>Where is the world's largest desert lake situated?</div>
+  <div class="options">
+    <label><input type="radio" name="q9" value="A"> (A) Asia</label>
+    <label><input type="radio" name="q9" value="B"> (B) Europe</label>
+    <label><input type="radio" name="q9" value="C"> (C) Africa</label>
+    <label><input type="radio" name="q9" value="D"> (D) Australia</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 10 -->
+<div class="card" data-answer="A">
+  <div><span class="qnum">10.</span>The city of Baghdad is situated on the bank of</div>
+  <div class="options">
+    <label><input type="radio" name="q10" value="A"> (A) Tigris River</label>
+    <label><input type="radio" name="q10" value="B"> (B) Danube River</label>
+    <label><input type="radio" name="q10" value="C"> (C) Tagus River</label>
+    <label><input type="radio" name="q10" value="D"> (D) Seine River</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 11 -->
+<div class="card" data-answer="B">
+  <div><span class="qnum">11.</span>Which of the following rivers is known as Sorrow of Bengal?</div>
+  <div class="options">
+    <label><input type="radio" name="q11" value="A"> (A) Hooghly</label>
+    <label><input type="radio" name="q11" value="B"> (B) Damodar</label>
+    <label><input type="radio" name="q11" value="C"> (C) Teesta</label>
+    <label><input type="radio" name="q11" value="D"> (D) Ganga</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 12 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">12.</span>The New York Stock Exchange is situated at</div>
+  <div class="options">
+    <label><input type="radio" name="q12" value="A"> (A) White House</label>
+    <label><input type="radio" name="q12" value="B"> (B) Adam Bridge</label>
+    <label><input type="radio" name="q12" value="C"> (C) Wall Street</label>
+    <label><input type="radio" name="q12" value="D"> (D) Hollywood</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 13 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">13.</span>What is the National Flower of India?</div>
+  <div class="options">
+    <label><input type="radio" name="q13" value="A"> (A) Rose</label>
+    <label><input type="radio" name="q13" value="B"> (B) Lily</label>
+    <label><input type="radio" name="q13" value="C"> (C) Lotus</label>
+    <label><input type="radio" name="q13" value="D"> (D) Marigold</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 14 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">14.</span>The Jagannath Temple is located in</div>
+  <div class="options">
+    <label><input type="radio" name="q14" value="A"> (A) Mathura</label>
+    <label><input type="radio" name="q14" value="B"> (B) Vrindavan</label>
+    <label><input type="radio" name="q14" value="C"> (C) Puri</label>
+    <label><input type="radio" name="q14" value="D"> (D) Mount Abu</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 15 -->
+<div class="card" data-answer="A">
+  <div><span class="qnum">15.</span>Dachigam National Park is situated in</div>
+  <div class="options">
+    <label><input type="radio" name="q15" value="A"> (A) Jammu and Kashmir</label>
+    <label><input type="radio" name="q15" value="B"> (B) Karnataka</label>
+    <label><input type="radio" name="q15" value="C"> (C) Uttarakhand</label>
+    <label><input type="radio" name="q15" value="D"> (D) Tamil Nadu</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 16 -->
+<div class="card" data-answer="B">
+  <div><span class="qnum">16.</span>Which of the following is not a Kharif crop?</div>
+  <div class="options">
+    <label><input type="radio" name="q16" value="A"> (A) Rice</label>
+    <label><input type="radio" name="q16" value="B"> (B) Linseed</label>
+    <label><input type="radio" name="q16" value="C"> (C) Maize</label>
+    <label><input type="radio" name="q16" value="D"> (D) Millet</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 17 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">17.</span>Who among the following is not a recipient of Bharat Ratna?</div>
+  <div class="options">
+    <label><input type="radio" name="q17" value="A"> (A) Rabindranath Tagore</label>
+    <label><input type="radio" name="q17" value="B"> (B) Dr. Radhakrishnan</label>
+    <label><input type="radio" name="q17" value="C"> (C) Pandit Ravishankar</label>
+    <label><input type="radio" name="q17" value="D"> (D) C. V. Raman</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 18 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">18.</span>What is the capital of Lakshadweep?</div>
+  <div class="options">
+    <label><input type="radio" name="q18" value="A"> (A) Silvassa</label>
+    <label><input type="radio" name="q18" value="B"> (B) Kozhikode</label>
+    <label><input type="radio" name="q18" value="C"> (C) Kavaratti</label>
+    <label><input type="radio" name="q18" value="D"> (D) Puducherry</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 19 -->
+<div class="card" data-answer="A">
+  <div><span class="qnum">19.</span>The Headquarters of Central Railway is situated in</div>
+  <div class="options">
+    <label><input type="radio" name="q19" value="A"> (A) Mumbai</label>
+    <label><input type="radio" name="q19" value="B"> (B) Jabalpur</label>
+    <label><input type="radio" name="q19" value="C"> (C) Bilaspur</label>
+    <label><input type="radio" name="q19" value="D"> (D) Gorakhpur</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 20 -->
+<div class="card" data-answer="D">
+  <div><span class="qnum">20.</span>The Armed Forces Medical College is situated in</div>
+  <div class="options">
+    <label><input type="radio" name="q20" value="A"> (A) Dehradun</label>
+    <label><input type="radio" name="q20" value="B"> (B) Ooty</label>
+    <label><input type="radio" name="q20" value="C"> (C) Bengaluru</label>
+    <label><input type="radio" name="q20" value="D"> (D) Pune</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 21 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">21.</span>Which of the following Indian States does not share its boundary with Myanmar?</div>
+  <div class="options">
+    <label><input type="radio" name="q21" value="A"> (A) Nagaland</label>
+    <label><input type="radio" name="q21" value="B"> (B) Arunachal Pradesh</label>
+    <label><input type="radio" name="q21" value="C"> (C) Assam</label>
+    <label><input type="radio" name="q21" value="D"> (D) Mizoram</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 22 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">22.</span>Which of the following is not a Nationalized Bank?</div>
+  <div class="options">
+    <label><input type="radio" name="q22" value="A"> (A) Indian Bank</label>
+    <label><input type="radio" name="q22" value="B"> (B) Syndicate Bank</label>
+    <label><input type="radio" name="q22" value="C"> (C) Axis Bank</label>
+    <label><input type="radio" name="q22" value="D"> (D) Corporation Bank</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 23 -->
+<div class="card" data-answer="A">
+  <div><span class="qnum">23.</span>The Vice President of India is</div>
+  <div class="options">
+    <label><input type="radio" name="q23" value="A"> (A) elected by the members of both the Houses of the Parliament</label>
+    <label><input type="radio" name="q23" value="B"> (B) appointed by the President of India</label>
+    <label><input type="radio" name="q23" value="C"> (C) nominated by the President of India</label>
+    <label><input type="radio" name="q23" value="D"> (D) selected by the Indian Cabinet</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 24 -->
+<div class="card" data-answer="B">
+  <div><span class="qnum">24.</span>The First Schedule of the Indian Constitution</div>
+  <div class="options">
+    <label><input type="radio" name="q24" value="A"> (A) contains forms of oath and affirmation</label>
+    <label><input type="radio" name="q24" value="B"> (B) consists of list of the States and Union Territories</label>
+    <label><input type="radio" name="q24" value="C"> (C) contains the list of languages recognized by the Parliament</label>
+    <label><input type="radio" name="q24" value="D"> (D) consists of the provisions regarding powers, authority, etc.</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 25 -->
+<div class="card" data-answer="A">
+  <div><span class="qnum">25.</span>Rovers Cup is associated with</div>
+  <div class="options">
+    <label><input type="radio" name="q25" value="A"> (A) Football</label>
+    <label><input type="radio" name="q25" value="B"> (B) Hockey</label>
+    <label><input type="radio" name="q25" value="C"> (C) Cricket</label>
+    <label><input type="radio" name="q25" value="D"> (D) Lawn tennis</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 26 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">26.</span>The East India Company, which came to India for the purpose of trade, was founded by</div>
+  <div class="options">
+    <label><input type="radio" name="q26" value="A"> (A) the British Government</label>
+    <label><input type="radio" name="q26" value="B"> (B) the Queen of England</label>
+    <label><input type="radio" name="q26" value="C"> (C) merchants of London</label>
+    <label><input type="radio" name="q26" value="D"> (D) foreign travellers</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 27 -->
+<div class="card" data-answer="B">
+  <div><span class="qnum">27.</span>Which Mughal king was defeated by the British and was deported from India?</div>
+  <div class="options">
+    <label><input type="radio" name="q27" value="A"> (A) Bahlol Lodi</label>
+    <label><input type="radio" name="q27" value="B"> (B) Bahadur Shah Zafar II</label>
+    <label><input type="radio" name="q27" value="C"> (C) Altamash</label>
+    <label><input type="radio" name="q27" value="D"> (D) Mohammed bin Qasim</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 28 -->
+<div class="card" data-answer="D">
+  <div><span class="qnum">28.</span>Jaydev was a religious leader during the Bhakti Movement from</div>
+  <div class="options">
+    <label><input type="radio" name="q28" value="A"> (A) Bengal</label>
+    <label><input type="radio" name="q28" value="B"> (B) Punjab</label>
+    <label><input type="radio" name="q28" value="C"> (C) Maharashtra</label>
+    <label><input type="radio" name="q28" value="D"> (D) Odisha</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 29 -->
+<div class="card" data-answer="B">
+  <div><span class="qnum">29.</span>When was Pakistan created as a separate dominion?</div>
+  <div class="options">
+    <label><input type="radio" name="q29" value="A"> (A) 3rd June, 1947</label>
+    <label><input type="radio" name="q29" value="B"> (B) 14th August, 1947</label>
+    <label><input type="radio" name="q29" value="C"> (C) 15th August, 1947</label>
+    <label><input type="radio" name="q29" value="D"> (D) 16th August, 1947</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 30 -->
+<div class="card" data-answer="A">
+  <div><span class="qnum">30.</span>Who started the 1857 Revolution by breaking his rank and killing two British Officers?</div>
+  <div class="options">
+    <label><input type="radio" name="q30" value="A"> (A) Mangal Pandey</label>
+    <label><input type="radio" name="q30" value="B"> (B) Bhagat Singh</label>
+    <label><input type="radio" name="q30" value="C"> (C) Sukhdev</label>
+    <label><input type="radio" name="q30" value="D"> (D) Shivaram Rajguru</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 31 -->
+<div class="card" data-answer="B">
+  <div><span class="qnum">31.</span>Which of the following is observed as Children's Day?</div>
+  <div class="options">
+    <label><input type="radio" name="q31" value="A"> (A) 19th November</label>
+    <label><input type="radio" name="q31" value="B"> (B) 14th November</label>
+    <label><input type="radio" name="q31" value="C"> (C) 10th December</label>
+    <label><input type="radio" name="q31" value="D"> (D) 26th January</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 32 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">32.</span>Who is known as Missile Man of India?</div>
+  <div class="options">
+    <label><input type="radio" name="q32" value="A"> (A) C. V. Raman</label>
+    <label><input type="radio" name="q32" value="B"> (B) Satyendra Nath Bose</label>
+    <label><input type="radio" name="q32" value="C"> (C) A. P. J. Abdul Kalam</label>
+    <label><input type="radio" name="q32" value="D"> (D) Har Gobind Khorana</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 33 -->
+<div class="card" data-answer="D">
+  <div><span class="qnum">33.</span>Where is the Sawai Mansingh Stadium situated?</div>
+  <div class="options">
+    <label><input type="radio" name="q33" value="A"> (A) New Delhi</label>
+    <label><input type="radio" name="q33" value="B"> (B) Patiala</label>
+    <label><input type="radio" name="q33" value="C"> (C) Lucknow</label>
+    <label><input type="radio" name="q33" value="D"> (D) Jaipur</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 34 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">34.</span>Which of the following sports is associated with the term 'half volley'?</div>
+  <div class="options">
+    <label><input type="radio" name="q34" value="A"> (A) Basketball</label>
+    <label><input type="radio" name="q34" value="B"> (B) Volleyball</label>
+    <label><input type="radio" name="q34" value="C"> (C) Tennis</label>
+    <label><input type="radio" name="q34" value="D"> (D) Wrestling</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 35 -->
+<div class="card" data-answer="A">
+  <div><span class="qnum">35.</span>What is the National Sport of Bangladesh?</div>
+  <div class="options">
+    <label><input type="radio" name="q35" value="A"> (A) Kabaddi</label>
+    <label><input type="radio" name="q35" value="B"> (B) Gymnastics</label>
+    <label><input type="radio" name="q35" value="C"> (C) Hockey</label>
+    <label><input type="radio" name="q35" value="D"> (D) Baseball</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 36 -->
+<div class="card" data-answer="B">
+  <div><span class="qnum">36.</span>Who was the author of the book, 'Man-Eaters of Kumaon'?</div>
+  <div class="options">
+    <label><input type="radio" name="q36" value="A"> (A) Rudyard Kipling</label>
+    <label><input type="radio" name="q36" value="B"> (B) Jim Corbett</label>
+    <label><input type="radio" name="q36" value="C"> (C) Ruskin Bond</label>
+    <label><input type="radio" name="q36" value="D"> (D) Mulk Raj Anand</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 37 -->
+<div class="card" data-answer="A">
+  <div><span class="qnum">37.</span>Who discovered the South Pole?</div>
+  <div class="options">
+    <label><input type="radio" name="q37" value="A"> (A) Amundsen</label>
+    <label><input type="radio" name="q37" value="B"> (B) Captain Cook</label>
+    <label><input type="radio" name="q37" value="C"> (C) Columbus</label>
+    <label><input type="radio" name="q37" value="D"> (D) David Livingstone</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 38 -->
+<div class="card" data-answer="D">
+  <div><span class="qnum">38.</span>Which canal connects Atlantic Ocean with Pacific Ocean?</div>
+  <div class="options">
+    <label><input type="radio" name="q38" value="A"> (A) Suez Canal</label>
+    <label><input type="radio" name="q38" value="B"> (B) Kiel Canal</label>
+    <label><input type="radio" name="q38" value="C"> (C) English Channel</label>
+    <label><input type="radio" name="q38" value="D"> (D) Panama Canal</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 39 -->
+<div class="card" data-answer="A">
+  <div><span class="qnum">39.</span>What is known as 'Gift of Nile'?</div>
+  <div class="options">
+    <label><input type="radio" name="q39" value="A"> (A) Egypt</label>
+    <label><input type="radio" name="q39" value="B"> (B) Turkey</label>
+    <label><input type="radio" name="q39" value="C"> (C) Ethiopia</label>
+    <label><input type="radio" name="q39" value="D"> (D) Sudan</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 40 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">40.</span>Paris is situated on the bank of which river?</div>
+  <div class="options">
+    <label><input type="radio" name="q40" value="A"> (A) Thames</label>
+    <label><input type="radio" name="q40" value="B"> (B) Danube</label>
+    <label><input type="radio" name="q40" value="C"> (C) Seine</label>
+    <label><input type="radio" name="q40" value="D"> (D) Mississippi</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 41 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">41.</span>What is the smallest planet in the solar system?</div>
+  <div class="options">
+    <label><input type="radio" name="q41" value="A"> (A) Venus</label>
+    <label><input type="radio" name="q41" value="B"> (B) Pluto</label>
+    <label><input type="radio" name="q41" value="C"> (C) Mercury</label>
+    <label><input type="radio" name="q41" value="D"> (D) Neptune</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 42 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">42.</span>What is the largest living animal of the world?</div>
+  <div class="options">
+    <label><input type="radio" name="q42" value="A"> (A) Mountain lion</label>
+    <label><input type="radio" name="q42" value="B"> (B) Shark</label>
+    <label><input type="radio" name="q42" value="C"> (C) Blue whale</label>
+    <label><input type="radio" name="q42" value="D"> (D) Gorilla</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 43 -->
+<div class="card" data-answer="B">
+  <div><span class="qnum">43.</span>What is the capital of Syria?</div>
+  <div class="options">
+    <label><input type="radio" name="q43" value="A"> (A) Jerusalem</label>
+    <label><input type="radio" name="q43" value="B"> (B) Damascus</label>
+    <label><input type="radio" name="q43" value="C"> (C) Dar es Salaam</label>
+    <label><input type="radio" name="q43" value="D"> (D) Abu Dhabi</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 44 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">44.</span>What is the currency of Thailand?</div>
+  <div class="options">
+    <label><input type="radio" name="q44" value="A"> (A) Dollar</label>
+    <label><input type="radio" name="q44" value="B"> (B) Baht</label>
+    <label><input type="radio" name="q44" value="C"> (C) Rupee</label>
+    <label><input type="radio" name="q44" value="D"> (D) Rupiah</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 45 -->
+<div class="card" data-answer="B">
+  <div><span class="qnum">45.</span>Which of the following is the largest desert?</div>
+  <div class="options">
+    <label><input type="radio" name="q45" value="A"> (A) Atacama</label>
+    <label><input type="radio" name="q45" value="B"> (B) Gobi</label>
+    <label><input type="radio" name="q45" value="C"> (C) Sahara</label>
+    <label><input type="radio" name="q45" value="D"> (D) Kalahari</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 46 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">46.</span>Which organ produces insulin?</div>
+  <div class="options">
+    <label><input type="radio" name="q46" value="A"> (A) Liver</label>
+    <label><input type="radio" name="q46" value="B"> (B) Stomach</label>
+    <label><input type="radio" name="q46" value="C"> (C) Pancreas</label>
+    <label><input type="radio" name="q46" value="D"> (D) Kidney</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 47 -->
+<div class="card" data-answer="A">
+  <div><span class="qnum">47.</span>Haemoglobin molecule contains</div>
+  <div class="options">
+    <label><input type="radio" name="q47" value="A"> (A) Iron</label>
+    <label><input type="radio" name="q47" value="B"> (B) Selenium</label>
+    <label><input type="radio" name="q47" value="C"> (C) Silicon</label>
+    <label><input type="radio" name="q47" value="D"> (D) Calcium</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 48 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">48.</span>Polio is caused by</div>
+  <div class="options">
+    <label><input type="radio" name="q48" value="A"> (A) Protozoa</label>
+    <label><input type="radio" name="q48" value="B"> (B) Bacteria</label>
+    <label><input type="radio" name="q48" value="C"> (C) Virus</label>
+    <label><input type="radio" name="q48" value="D"> (D) Fungus</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 49 -->
+<div class="card" data-answer="D">
+  <div><span class="qnum">49.</span>What is a voltmeter?</div>
+  <div class="options">
+    <label><input type="radio" name="q49" value="A"> (A) It is an instrument for electricity</label>
+    <label><input type="radio" name="q49" value="B"> (B) It is an instrument for electric current</label>
+    <label><input type="radio" name="q49" value="C"> (C) It is an instrument for electricity consumed</label>
+    <label><input type="radio" name="q49" value="D"> (D) It is an instrument for potential difference across an electric circuit</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 50 -->
+<div class="card" data-answer="D">
+  <div><span class="qnum">50.</span>What is the SI unit of force?</div>
+  <div class="options">
+    <label><input type="radio" name="q50" value="A"> (A) Joule</label>
+    <label><input type="radio" name="q50" value="B"> (B) Bar</label>
+    <label><input type="radio" name="q50" value="C"> (C) Erg</label>
+    <label><input type="radio" name="q50" value="D"> (D) Newton</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- The remaining questions 51-100 are included below with reasonable answers -->
+
+<!-- Question 51 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">51.</span>What is the chemical name of 'bleaching powder'?</div>
+  <div class="options">
+    <label><input type="radio" name="q51" value="A"> (A) Calcium chloride</label>
+    <label><input type="radio" name="q51" value="B"> (B) Calcium hydroxide</label>
+    <label><input type="radio" name="q51" value="C"> (C) Calcium hypochlorite</label>
+    <label><input type="radio" name="q51" value="D"> (D) Calcium carbonate</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 52 -->
+<div class="card" data-answer="A">
+  <div><span class="qnum">52.</span>What is the chemical symbol of gold?</div>
+  <div class="options">
+    <label><input type="radio" name="q52" value="A"> (A) Au</label>
+    <label><input type="radio" name="q52" value="B"> (B) Ag</label>
+    <label><input type="radio" name="q52" value="C"> (C) Pb</label>
+    <label><input type="radio" name="q52" value="D"> (D) Am</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 53 -->
+<div class="card" data-answer="B">
+  <div><span class="qnum">53.</span>Sound travels fastest through which of the following?</div>
+  <div class="options">
+    <label><input type="radio" name="q53" value="A"> (A) Vacuum</label>
+    <label><input type="radio" name="q53" value="B"> (B) Solid</label>
+    <label><input type="radio" name="q53" value="C"> (C) Liquid</label>
+    <label><input type="radio" name="q53" value="D"> (D) Gas</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 54 -->
+<div class="card" data-answer="D">
+  <div><span class="qnum">54.</span>The spleen is a part of which system?</div>
+  <div class="options">
+    <label><input type="radio" name="q54" value="A"> (A) Digestive system</label>
+    <label><input type="radio" name="q54" value="B"> (B) Nervous system</label>
+    <label><input type="radio" name="q54" value="C"> (C) Excretory system</label>
+    <label><input type="radio" name="q54" value="D"> (D) None of the above</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 55 -->
+<div class="card" data-answer="B">
+  <div><span class="qnum">55.</span>Nephron is a</div>
+  <div class="options">
+    <label><input type="radio" name="q55" value="A"> (A) Nerve cell</label>
+    <label><input type="radio" name="q55" value="B"> (B) Unit of excretory system</label>
+    <label><input type="radio" name="q55" value="C"> (C) Kidney cell</label>
+    <label><input type="radio" name="q55" value="D"> (D) Collecting system</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 56 -->
+<div class="card" data-answer="D">
+  <div><span class="qnum">56.</span>The thyroid gland is a part of</div>
+  <div class="options">
+    <label><input type="radio" name="q56" value="A"> (A) Digestive system</label>
+    <label><input type="radio" name="q56" value="B"> (B) Nervous system</label>
+    <label><input type="radio" name="q56" value="C"> (C) Excretory system</label>
+    <label><input type="radio" name="q56" value="D"> (D) Endocrine system</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 57 -->
+<div class="card" data-answer="A">
+  <div><span class="qnum">57.</span>Which vitamin deficiency causes night blindness?</div>
+  <div class="options">
+    <label><input type="radio" name="q57" value="A"> (A) Vitamin A</label>
+    <label><input type="radio" name="q57" value="B"> (B) Vitamin C</label>
+    <label><input type="radio" name="q57" value="C"> (C) Vitamin D</label>
+    <label><input type="radio" name="q57" value="D"> (D) Vitamin K</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 58 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">58.</span>Decibel is a unit of</div>
+  <div class="options">
+    <label><input type="radio" name="q58" value="A"> (A) Power</label>
+    <label><input type="radio" name="q58" value="B"> (B) Brightness of light</label>
+    <label><input type="radio" name="q58" value="C"> (C) Loudness of sound</label>
+    <label><input type="radio" name="q58" value="D"> (D) Atmospheric pressure</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 59 -->
+<div class="card" data-answer="B">
+  <div><span class="qnum">59.</span>Blood sugar level in the body is increased by</div>
+  <div class="options">
+    <label><input type="radio" name="q59" value="A"> (A) Corticosteroid</label>
+    <label><input type="radio" name="q59" value="B"> (B) Glucagon</label>
+    <label><input type="radio" name="q59" value="C"> (C) Insulin</label>
+    <label><input type="radio" name="q59" value="D"> (D) Histamine</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 60 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">60.</span>Deficiency of vitamin A causes</div>
+  <div class="options">
+    <label><input type="radio" name="q60" value="A"> (A) Cataract</label>
+    <label><input type="radio" name="q60" value="B"> (B) Night blindness</label>
+    <label><input type="radio" name="q60" value="C"> (C) Myopia</label>
+    <label><input type="radio" name="q60" value="D"> (D) All of the above</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 61 -->
+<div class="card" data-answer="B">
+  <div><span class="qnum">61.</span>Which of the following is a female germ cell?</div>
+  <div class="options">
+    <label><input type="radio" name="q61" value="A"> (A) Ovary</label>
+    <label><input type="radio" name="q61" value="B"> (B) Ovum</label>
+    <label><input type="radio" name="q61" value="C"> (C) Zygote</label>
+    <label><input type="radio" name="q61" value="D"> (D) Morula</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 62 -->
+<div class="card" data-answer="A">
+  <div><span class="qnum">62.</span>The synonym of 'abhor' is</div>
+  <div class="options">
+    <label><input type="radio" name="q62" value="A"> (A) Despise</label>
+    <label><input type="radio" name="q62" value="B"> (B) Datum</label>
+    <label><input type="radio" name="q62" value="C"> (C) By</label>
+    <label><input type="radio" name="q62" value="D"> (D) None</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 63 -->
+<div class="card" data-answer="D">
+  <div><span class="qnum">63.</span>Complete the correct preposition: "I will be back ___ 6 o'clock."</div>
+  <div class="options">
+    <label><input type="radio" name="q63" value="A"> (A) on</label>
+    <label><input type="radio" name="q63" value="B"> (B) in</label>
+    <label><input type="radio" name="q63" value="C"> (C) at</label>
+    <label><input type="radio" name="q63" value="D"> (D) under</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 64 -->
+<div class="card" data-answer="D">
+  <div><span class="qnum">64.</span>The antonym of 'admire' is</div>
+  <div class="options">
+    <label><input type="radio" name="q64" value="A"> (A) favour</label>
+    <label><input type="radio" name="q64" value="B"> (B) in</label>
+    <label><input type="radio" name="q64" value="C"> (C) like</label>
+    <label><input type="radio" name="q64" value="D"> (D) despise</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 65 -->
+<div class="card" data-answer="A">
+  <div><span class="qnum">65.</span>What is the singular of 'data'?</div>
+  <div class="options">
+    <label><input type="radio" name="q65" value="A"> (A) Datum</label>
+    <label><input type="radio" name="q65" value="B"> (B) Date</label>
+    <label><input type="radio" name="q65" value="C"> (C) Datam</label>
+    <label><input type="radio" name="q65" value="D"> (D) Data</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 66 -->
+<div class="card" data-answer="D">
+  <div><span class="qnum">66.</span>Complete the following proverb: "A penny saved is a penny ___"</div>
+  <div class="options">
+    <label><input type="radio" name="q66" value="A"> (A) wasted</label>
+    <label><input type="radio" name="q66" value="B"> (B) charged</label>
+    <label><input type="radio" name="q66" value="C"> (C) lost</label>
+    <label><input type="radio" name="q66" value="D"> (D) saved</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 67 -->
+<div class="card" data-answer="D">
+  <div><span class="qnum">67.</span>What is the opposite gender of 'duke'?</div>
+  <div class="options">
+    <label><input type="radio" name="q67" value="A"> (A) Drake</label>
+    <label><input type="radio" name="q67" value="B"> (B) Duchess</label>
+    <label><input type="radio" name="q67" value="C"> (C) Countess</label>
+    <label><input type="radio" name="q67" value="D"> (D) None of the above</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 68 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">68.</span>Complete the idiom: "Kill two birds with one ___"</div>
+  <div class="options">
+    <label><input type="radio" name="q68" value="A"> (A) shot</label>
+    <label><input type="radio" name="q68" value="B"> (B) bullet</label>
+    <label><input type="radio" name="q68" value="C"> (C) stone</label>
+    <label><input type="radio" name="q68" value="D"> (D) gun</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 69 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">69.</span>Complete the sentence with the correct determiner: "Due to ___ personal reasons both of them avoid each other."</div>
+  <div class="options">
+    <label><input type="radio" name="q69" value="A"> (A) the</label>
+    <label><input type="radio" name="q69" value="B"> (B) a</label>
+    <label><input type="radio" name="q69" value="C"> (C) some</label>
+    <label><input type="radio" name="q69" value="D"> (D) any</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 70 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">70.</span>What is the adverb form of the adjective 'loud'?</div>
+  <div class="options">
+    <label><input type="radio" name="q70" value="A"> (A) Louder</label>
+    <label><input type="radio" name="q70" value="B"> (B) Loudest</label>
+    <label><input type="radio" name="q70" value="C"> (C) Loudly</label>
+    <label><input type="radio" name="q70" value="D"> (D) Loudy</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 71 -->
+<div class="card" data-answer="C">
+  <div><span class="qnum">71.</span>What is the synonym of 'a crazy'?</div>
+  <div class="options">
+    <label><input type="radio" name="q71" value="A"> (A) Bad</label>
+    <label><input type="radio" name="q71" value="B"> (B) Sensitive</label>
+    <label><input type="radio" name="q71" value="C"> (C) Insane</label>
+    <label><input type="radio" name="q71" value="D"> (D) Illiterate</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 72 -->
+<div class="card" data-answer="B">
+  <div><span class="qnum">72.</span>What is the antonym of 'beautiful'?</div>
+  <div class="options">
+    <label><input type="radio" name="q72" value="A"> (A) Black</label>
+    <label><input type="radio" name="q72" value="B"> (B) Ugly</label>
+    <label><input type="radio" name="q72" value="C"> (C) Handsome</label>
+    <label><input type="radio" name="q72" value="D"> (D) Cruel</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 73 -->
+<div class="card" data-answer="B">
+  <div><span class="qnum">73.</span>A person who slaughters and sells meat is called</div>
+  <div class="options">
+    <label><input type="radio" name="q73" value="A"> (A) Slaughterer</label>
+    <label><input type="radio" name="q73" value="B"> (B) Butcher</label>
+    <label><input type="radio" name="q73" value="C"> (C) Butler</label>
+    <label><input type="radio" name="q73" value="D"> (D) Chauffeur</label>
+  </div>
+  <div class="feedback"></div>
+</div>
+
+<!-- Question 74 -->
+<div class="card" data-answer="A">
+  <div><span class="qnum">74.</span>What is the opposite gender of 'stag'?</div>
+  <div class="opt
